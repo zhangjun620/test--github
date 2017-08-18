@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <base href="http://noi.openjudge.cn/" target="_blank">
+  <style>
+    script {
+      display: block;
+      border: 2px solid;
+      white-space: pre;
+    }
+    a {
+      counter-increment: a;
+    }
+    a::before {
+      content: counter(a) '. ';
+    }
+    h2 {
+      counter-reset: a;
+    }
+  </style>
+</head>
+<body>
+  <h2>1.1编程基础之输入输出</h2>
+
+  <a href="/ch0101/01/">Hello, World!</a>
+  <script>
+    console.log('hello world')
+  </script>
+  <a href="/ch0101/02/">输出第二个整数</a>
+  <script>
+var a = + prompt('请输入值:a')
+var b = + prompt('请输入值:b')
+var c = + prompt('请输入值:c')
+console.log(b)
+  </script>
+  <a href="/ch0101/03/">对齐输出</a>
+  <script>
+    
+  </script>
+  <a href="/ch0101/04/">输出保留3位小数的浮点数</a>
+  <script>
+    var a = + prompt('yigeshu')
+    console.log(a.toFixed(3))
+  </script>
+  <a href="/ch0101/05/">输出保留12位小数的浮点数</a>
+  <script>
+       var a = + prompt('yigeshu')
+    console.log(a.toFixed(12))
+  </script>
+  <a href="/ch0101/06/">空格分隔输出</a>
+  <script>
+    
+  </script>
+  <a href="/ch0101/07/">输出浮点数</a>
+  <script>
+    
+  </script>
+  <a href="/ch0101/08/">字符三角形</a>
+  <script>
+    var a = prompt('')
+console.log(" "+" "+a+"\n" +" "+ a + a + a+"\n" + a + a + a + a + a )
+  </script>
+  <a href="/ch0101/09/">字符菱形</a>
+  <script>
+    var a = prompt('')
+console.log(" "+" "+a+"\n" +" "+ a + a + a+"\n" + a + a + a + a + a +"\n"+" "+ a + a + a + " "+"\n"+ " " + " "+ a + " " + " " )
+  </script>
+  <a href="/ch0101/10/">超级玛丽游戏</a>
+  <script>
+    var a = `                ********
+               ************
+               ####....#.
+             #..###.....##....
+             ###.......######              ###                 ###           ###           ###
+                ...........               #...#               #...#         #...#         #...#
+               ##*#######                 #.#.#               #.#.#         #.#.#         #.#.#
+            ####*******######             #.#.#               #.#.#         #.#.#         #.#.#
+           ...#***.****.*###....          #...#               #...#         #...#         #...#
+           ....**********##.....           ###                 ###           ###           ###
+           ....****    *****....
+             ####        ####
+           ######        ######
+##############################################################              ##################################
+#...#......#.##...#......#.##...#......#.##------------------#              #...#......#.##------------------#
+###########################################------------------#              ###############------------------#
+#..#....#....##..#....#....##..#....#....#####################              #..#....#....#####################
+##########################################    #----------#                  ##############    #----------#
+#.....#......##.....#......##.....#......#    #----------#                  #.....#......#    #----------#
+##########################################    #----------#                  ##############    #----------#
+#.#..#....#..##.#..#....#..##.#..#....#..#    #----------#                  #.#..#....#..#    #----------#
+##########################################    ############                  ##############    ############`
+console.log(a)
+  </script>
+
+
+  <h2>1.2编程基础之变量定义、赋值及转换</h2>
+  <a href="/ch0102/01/">整型数据类型存储空间大小</a>
+  <script>
+    
+  </script>
+  <a href="/ch0102/02/">浮点型数据类型存储空间大小</a>
+  <script>
+    
+  </script>
+  <a href="/ch0102/03/">其他基本数据类型存储空间大小</a>
+  <script>
+    
+  </script>
+  <a href="/ch0102/04/">填空：类型转换1</a>
+  <script>
+    
+  </script>
+  <a href="/ch0102/05/">填空：类型转换2</a>
+  <script>
+    
+  </script>
+  <a href="/ch0102/06/">浮点数向零舍入</a>
+  <script>
+    var a = +prompt('a')
+console.log(Math.round(a))
+  </script>
+  <a href="/ch0102/07/">打印ASCII码</a>
+  <script>
+    
+  </script>
+  <a href="/ch0102/08/">打印字符</a>
+  <script>
+    
+  </script>
+  <a href="/ch0102/09/">整型与布尔型的转换</a>
+  <script>
+    var a = +prompt('a')
+var b = Boolean(a)
+var c = Number(b)
+console.log(c)
+  </script>
+  <a href="/ch0102/10/">Hello, World!的大小</a>
+  <script>
+    
+  </script>
+
+
+  <h2>1.3编程基础之算术表达式与顺序执行</h2>
+  <a href="/ch0103/01/">A+B问题</a>
+  <script>
+    var a = + prompt('请输入数字1')
+    var b = + prompt('请输入数字2')
+    var value1 = a + b
+    console.log(value1)
+  </script>
+  <a href="/ch0103/02/">计算(a+b)*c的值</a>
+  <script>
+    var a = + prompt('请输入数字1')
+    var b = + prompt('请输入数字2')
+    var c = + prompt('请输入数字3')
+    var value1 = (a + b)*c
+    console.log(value1)
+  </script>
+  <a href="/ch0103/03/">计算(a+b)/c的值</a>
+  <script>
+    var a = + prompt('请输入数字1')
+    var b = + prompt('请输入数字2')
+    var c = + prompt('请输入数字3')
+    var value1 = (a + b)/c
+    console.log(value1)
+  </script>
+  <a href="/ch0103/04/">带余除法</a>
+  <script>
+    var num1 = + prompt('chushu');
+var num2 = + prompt('beichushu');
+var num = (num1 / num2);
+alert(num.toFixed(0));
+alert(num1 % num2)
+  </script>
+  <a href="/ch0103/05/">计算分数的浮点数值</a>
+  <script>
+    var num1 = prompt('fenzi');
+var num2 = prompt('fenmu')
+var num3 = num1 / num2
+alert(num3.toFixed(9))
+  </script>
+  <a href="/ch0103/06/">甲流疫情死亡率</a>
+  <script>
+    
+  </script>
+  <a href="/ch0103/07/">计算多项式的值</a>
+  <script>
+    var a = + prompt('请输入值:a')
+    var b = + prompt('请输入值:b')
+    var c = + prompt('请输入值:c')
+    var d = + prompt('请输入值:d')
+    var x = + prompt('请输入值:x')
+    var x1 =(Math.pow(x,3)*a + (x**2)*b + c*x + d)
+    console.log('f(x)=' + x1)
+  
+  </script>
+  <a href="/ch0103/08/">温度表达转化</a>
+  <script>
+  	var ff = + prompt('请输入实数F')
+    var cc = 5 * (ff - 32)/9
+    console.log(cc)
+    if (ff < -459.67) {
+    	console.log('请输入大于等于-459.67的值')
+    }
+  </script>
+  <a href="/ch0103/09/">与圆相关的计算</a>
+  <script>
+    var rr = + prompt('请输入半径')
+    var zhij = 2*rr
+    var zhouc = 2 * 3.14 * rr
+    var mianji = 3.14 *(rr**rr) 
+    console.log('直径=' + zhij)
+     console.log('周长=' + zhouc)
+      console.log('面积=' + mianji)
+  </script>
+  <a href="/ch0103/10/">计算并联电阻的阻值</a>
+  <script>
+    var r1 = + prompt('输入电阻抗1')
+    var r2 = + prompt('输入电阻抗2')
+    var R = 1/(1/r1 + 1/r2)
+    console.log(R)
+  </script>
+  <a href="/ch0103/11/">计算浮点数相除的余数</a>
+  <script>
+    var num1 = prompt('a')
+var num2 = prompt('b')
+var num3 = num1 % num2
+alert(num3)
+  </script>
+  <a href="/ch0103/12/">计算球的体积</a>
+  <script>
+    var num1 = prompt('r')
+var num2 = 4/3*3.14*(num1*num1*num1)
+alert(num2.toFixed(2))
+  </script>
+  <a href="/ch0103/13/">反向输出一个三位数</a>
+  <script>
+s="100";
+for(var i=s.length-1;i>=0;i--){
+document.write(s.substr(i,1));
+}
+  </script>
+  <a href="/ch0103/14/">大象喝水</a>
+  <script>
+    var hei = + prompt('输入桶深')
+    var r1 = + prompt('输入桶的半径')
+    var value1 = 3.14 * r1 * r1 * hei
+    console.log(value1)  
+  </script>
+  <a href="/ch0103/15/">苹果和虫子</a>
+  <script>
+    var n = + prompt('苹果:n') 
+    var x1 = + prompt('每小时吃几个:x1') 
+    var y1 = + prompt('经过几小时:y1')
+    var value1 = n - (y1 / x1)
+    console.log('剩下的苹果个数=' + value1)
+    if (y1 > n * x1) {
+    	content.log('错误')
+    }
+
+  </script>
+  <a href="/ch0103/16/">计算线段长度</a>
+  <script>
+    
+  </script>
+  <a href="/ch0103/17/">计算三角形面积</a>
+  <script>
+    
+  </script>
+  <a href="/ch0103/18/">等差数列末项计算</a>
+  <script>
+    
+  </script>
+  <a href="/ch0103/19/">A*B问题</a>
+  <script>
+    var a11 = + prompt('请输入正整数A')
+    var b11 = + prompt('请输入正整数B')
+    var value1 = a11 * b11
+    console.log(value1) 
+  </script>
+  <a href="/ch0103/20/">计算2的幂</a>
+  <script>
+    var n11 = + prompt('输入一个整数')
+    var value1 = Math.pow(2,n11)
+    console.log(value1)
+    if (n11 > 31) {
+    	console.log('请输入小于31的数')
+    }
+    if (n11 < 0) {
+    	console.log('请输入非负整数')
+    }
+  </script>
+
+
+  <h2>1.4编程基础之逻辑表达式与条件分支</h2>
+  <a href="/ch0104/01/">判断数正负</a>
+  <script>
+    var value1 = + prompt('输入一个数')
+    if (value1 < 0) {
+    	console.log('negative')
+    }else if (value1 > 0) {
+    	console.log('positive')
+    }else{
+    	console.log('zero')
+    }
+  </script>
+  <a href="/ch0104/02/">输出绝对值</a>
+  <script>
+    var value1 = + prompt('请输入一个数')
+    console.log(Math.abs(value1))
+  </script>
+  <a href="/ch0104/03/">奇偶数判断</a>
+  <script>
+    var value1 = + prompt('请输入一个数')
+    console.log(value1)
+    if (value1 % 2 == 0) {
+    	console.log('even')
+    }else if (value1 %2 == 1) {
+    	console.log('odd')
+    }
+  </script>
+  <a href="/ch0104/04/">奇偶ASCII值判断</a>
+  <script>
+    
+  </script>
+  <a href="/ch0104/05/">整数大小比较</a>
+  <script>
+    var value1 = + prompt('请输入x')
+    var value2 = + prompt('请输入y')
+    console.log('')
+    if (value1 > value2) {
+    	console.log('>')
+    }else if (value1 == value2) {
+    	console.log('=')
+    }else{
+    	console.log('<')
+    }
+  </script>
+  <a href="/ch0104/06/">判断是否为两位数</a>
+  <script>
+    var value1 = + prompt('qingshuruyigeshu')
+    console.log(value1)
+    if (value1 >= 10) {
+    	console.log('1')
+    }else{
+    	console.log('0')
+    }
+  </script>
+  <a href="/ch0104/07/">收集瓶盖赢大奖</a>
+  <script>
+    var num1 = + prompt('幸运')
+var num2 = + prompt('鼓励')
+if (num1 > 10){
+console.log('1')
+}else if(num2 > 20){
+console.log('1')
+}else{
+console.log('0')}
+VM704:4 1
+  </script>
+  <a href="/ch0104/08/">判断一个数能否同时被3和5整除</a>
+  <script>
+    var x1 = + prompt('输入一个数')
+    if (x1/3 == 1) {
+    	console.log('true')
+    }if (x1/5 == 1) {
+console.log('true')
+    }
+    console.log()
+  </script>
+  <a href="/ch0104/09/">判断能否被3，5，7整除</a>
+  <script>
+    var x = +prompt('x')
+if(x%3==0 && x%5==0 && x%7==0){
+console.log('true')}
+else if(x%3==0 && x%5==0 || x%5==0 && x%7==0 || x%3==0 && x%7==0){
+console.log('只能被两个数除')}
+else if(x%3==0 || x%5==0 || x%7==0){
+console.log('只能被一个数除')}
+else{
+console.log('n')}
+  </script>
+  <a href="/ch0104/10/">有一门课不及格的学生</a>
+  <script>
+    var num1 = + prompt('数学')
+var num2 = + prompt('语文')
+if((num1 >= 60)&&(num2 >=60)){console.log('1')}
+else{console.log('0')}
+  </script>
+  <a href="/ch0104/11/">晶晶赴约会</a>
+  <script>
+     var Number = + prompt('日期')
+ if (Number == 1){console.log('NO')}
+ if (Number == 3){console.log('NO')}
+ if (Number == 5){console.log('NO')}
+ if (Number == 2){console.log('YES')}
+ if (Number == 4){console.log('YES')}
+ if (Number == 6){console.log('YES')}
+ if (Number == 7){console.log('YES')}
+  </script>
+  <a href="/ch0104/12/">骑车与走路</a>
+  <script>
+    var a = +prompt('shuzi')
+var b = a / 1.2
+var c = 27 + 23 + a / 3
+if(b<c){console.log('walk')}
+else if(b == c){console.log('all')}
+else if(b > c){console.log('bike')}
+  </script>
+  <a href="/ch0104/13/">分段函数</a>
+  <script>
+    var a = +prompt('num')
+var y1 = -a + 2.5
+var y2 = 2 - 1.5*(a - 3)*(a - 3)
+var y3 = a / 2 - 1.5
+if(a < 5){console.log(y1.toFixed(3))}
+else if(a < 10){console.log(y2.toFixed(3))}
+else if(a < 20){console.log(y3.toFixed(3))}
+  </script>
+  <a href="/ch0104/14/">计算邮资</a>
+  <script>
+    
+  </script>
+  <a href="/ch0104/15/">最大数输出</a>
+  <script>
+    var a = +prompt('a')
+var b = +prompt('b')
+var c = +prompt('c')
+if(a > b && a > c){
+console.log(a)}
+else if(b > a && b > c){
+console.log(b)}
+else if(c > a && c > b){
+console.log(c)}
+  </script>
+  <a href="/ch0104/16/">三角形判断</a>
+  <script>
+    var a =+prompt('a')
+var b =+prompt('b')
+var c =+prompt('c')
+if((a*a) + (b*b) == (c*c)){console.log('yes')}
+else{console.log('no')}
+  </script>
+  <a href="/ch0104/17/">判断闰年</a>
+  <script>
+    var year = 2017
+
+if ((year % 400 == 0) ||
+  (year % 4 == 0 &&
+    year % 100 != 0)) {
+  console.log('yes')
+} else {
+  console.log('no')
+}
+
+if (year % 400 == 0) {
+  console.log('yes')
+} else if (year % 100 == 0) {
+  console.log('no')
+} else if (year % 4 == 0) {
+  console.log('yes')
+} else {
+  console.log('no')
+}
+  </script>
+  <a href="/ch0104/18/">点和正方形的关系</a>
+  <script>
+    
+  </script>
+  <a href="/ch0104/19/">简单计算器</a>
+  <script>
+    var a = +prompt('请输入一个数')
+var b = +prompt('请输入一个数')
+var c =  prompt('请输入一个数')
+
+if(c == '+'){
+var d = a + b
+console.log(d)}
+else if(c == '-'){
+var g = a - b
+console.log(g)}
+else if(c == '/'){
+var e = a / b
+console.log(e)}
+else if(c == '*'){
+var f = a * b
+console.log(f)}
+else if(a == 0 && c == "/"){console.log('Divided by zero!')}
+else{console.log('Invalid operator!')}
+  </script>
+  <a href="/ch0104/20/">求一元二次方程的根</a>
+  <script>
+    
+  </script>
+  <a href="/ch0104/21/">苹果和虫子2</a>
+  <script>
+    
+    var n = + prompt('苹果:n') 
+    var x1 = + prompt('每小时吃几个:x1') 
+    var y1 = + prompt('经过几小时:y1')
+    var value1 = n - (y1 / x1)
+    console.log('剩下的苹果个数=' + value1)
+  
+  </script>
+</body>
+</html>

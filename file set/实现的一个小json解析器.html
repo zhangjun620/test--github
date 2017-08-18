@@ -1,0 +1,122 @@
+<script>
+ function parseJson(str){
+  var i = 0
+  return parseValue()
+
+  function parseValue() {
+    // debugger
+    if (str[i] === '{') {
+      return parseObject(str)
+    } else if (str[i] === '[') {
+      return parseArray(str)
+    } else if (str[i] === 'n') {
+      return parseNull(str)
+    } else if (str[i] === 't') {
+      return parseTrue(str)
+    } else if (str[i] === 'f') {
+      return parseFalse(str)
+    } else if (str[i] === '"') {
+      return parseString(str)
+    } else {
+      return parseNumber(str)
+    }
+  }
+
+  function parseString() {
+    var result = ''
+    i++
+    while(str[i] != '"') {
+      result += str[i++]
+    }
+    i++
+    return result
+  }
+
+  function parseNull() {
+    var content = str.substr(i, 4)
+
+    if (content === 'null') {
+      i += 4
+      return null
+    } else {
+      throw new Error('Unexpected char at pos: ' + i)
+    }
+  }
+
+  function parseFalse() {
+    var content = str.substr(i, 5)
+    if (content === 'false') {
+      i += 5
+      return false
+    } else {
+      throw new Error('Unexpected char at pos: ' + i)
+    }
+  }
+
+  function parseTrue() {
+    var content = str.substr(i, 4)
+
+    if (content === 'true') {
+      i += 4
+      return true
+    } else {
+      throw new Error('Unexpected char at pos: ' + i)
+    }
+  }
+
+  function parseNumber() {
+    //-.eE+
+    var numStr = ''//-2e+8
+    while (isNumberChar(str[i])) {
+      numStr += str[i++]
+    }
+    return parseFloat(numStr)
+  }
+
+  function isNumberChar(c) {
+    var chars = {
+      '-': true,
+      '+': true,
+      'e': true,
+      'E': true,
+      '.': true
+    }
+    if (chars[c]) {
+      return true
+    }
+    if (c >= '0' && c <= '9') {
+      return true
+    }
+    return false
+  }
+
+  function parseArray() {
+    i++
+    var result = []//[1234,"lsdf",true,false]
+    while(str[i] !== ']') {
+      result.push(parseValue())
+      if (str[i] === ',') {
+        i++
+      }
+    }
+    i++
+    return result
+  }
+
+  function parseObject() {
+    i++
+    var result = {}//{"a":1,"b":2}
+    while(str[i] !== '}') {
+      var key = parseString(str)
+      i++
+      var value = parseValue(str)
+      result[key] = value
+      if (str[i] === ',') {
+        i++
+      }
+    }
+    i++
+    return result
+  }
+}
+</script>

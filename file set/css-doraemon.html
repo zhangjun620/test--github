@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by zhangjun620 (http://jsbin.com/jidijov/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+[zhengge]{
+  position: relative;
+  left:50px
+}
+
+
+[tou]{
+  border:1px solid black;
+  border-radius:47% 49% 49% 49%;
+  width:200px;
+  height:186px;
+  background-color: #07Beea;
+  position: relative;
+  z-index: -2;
+  left:-2px;
+}
+[lian]{
+  width:170px;
+  height:150px;
+  border:1px solid black;
+  border-radius:50%/50%;
+  background-color: #fff;
+  position: absolute;
+  top:32px;
+  left:15px;
+}
+[zuoyan]{
+  border:2px solid black;
+  width:47px; 
+  height:50px;
+  border-radius:40% 40%;
+  background-color:white;
+  position:absolute;
+  top:20px;
+  left:48px;
+  
+}
+[youyan]{
+    border:2px solid black;
+  width:47px; 
+  height:50px;
+  border-radius:40% 40%;
+  background-color:white;
+  position:absolute;
+  top:20px;
+  left:98px;
+}
+[yanzhu]{
+  width:10px;
+  height:10px;
+  border:1px solid black;
+  background-color: black;
+  border-radius:50%;
+  position: absolute;
+  top:50px;
+  left:80px;
+}
+[yanzhuyou]{
+    width:10px;
+  height:10px;
+  border:1px solid black;
+  background-color: black;
+  border-radius:50%;
+  position: absolute;
+  top:50px;
+  left:105px;
+}
+[yishu]{
+  border:1px solid black;
+  height:60px;
+  position: absolute;
+  top:90px;
+  left:99px;
+}
+[hongqiu]{
+  border:1px solid black;
+  width:30px;
+  height:30px;
+  background-color: red;
+  border-radius:50%;
+  position:absolute;
+  top:70px;
+  left:84px;
+}
+[zuiba]{
+  border:3px solid black;
+  width: 120px;
+  height:60px;
+  border-radius:90%;
+  position: absolute;
+  top:90px;
+  left:39px;
+  border-right:none;
+  border-top:none;
+  border-left:none;
+}
+[huxu]{
+  border:1px solid black;
+  width:45px;
+  height:0px;
+  position: absolute;
+  top:102px;
+  left:30px;
+}
+[huxu2]{
+  border:1px solid black;
+  width:45px;
+  height:0px;
+  position: absolute;
+  top:102px;
+  left:125px;
+}
+[shanghuxu]{
+  border:1px solid black;
+  width:45px;
+  height:0px;
+  position: absolute;
+  top:87px;
+  left:29px;
+  transform:rotate(15deg);
+}
+[xiahuxu]{
+    border:1px solid black;
+  width:45px;
+  height:0px;
+  position: absolute;
+  top:87px;
+  left:125px;
+  transform:rotate(-15deg);
+}
+[zuohuxu]{
+   border:1px solid black;
+  width:45px;
+  height:0px;
+  position: absolute;
+  top:117px;
+  left:29px;
+  transform:rotate(-10deg);
+}
+[youhuxu]{
+    border:1px solid black;
+  width:45px;
+  height:0px;
+  position: absolute;
+  top:117px;
+  left:125px;
+  transform:rotate(10deg);
+}
+[xiangquan]{
+  border:2px solid black;
+  width:130px;
+  height:13px;
+  border-radius:40%;
+  background-color: #A62400;
+  position: relative;
+  left:33px;
+  top:-20px;
+}
+[lingdang]{
+  border: 2px solid black;
+  border-radius:50%;
+  width:30px;
+  height:30px;
+  background-color: #F3eb24;
+  position: relative;
+  top:-34px;
+  left:85px;
+}
+.lingdang::before{
+  content:'';
+    width:10px;
+  height:10px;
+  background-color: black;
+  border:1px solid black;
+  border-radius:50%;
+  position: absolute;
+  left:9px;
+  top:11px;
+}
+.lingdang::after{
+  content:'';
+  width:2px;
+  height:7px;
+  border:1px solid black;
+  position: absolute;
+  left:13px;
+  top:22px;
+  background-color: black;
+}
+[shenti]{
+  position: relative;
+  z-index: -2;
+}
+[duzi]{
+  border:1px solid black;
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  position: absolute;
+  top:-69px;
+  left:56px;
+  background-color: #fff;
+  z-index: -1;
+}
+[koudai]{
+  border:1px solid black;
+  width:60px;
+  height:30px;
+  border-radius:100%/0 0 200% 200%;
+  position: absolute;
+  left:15px;
+  top:40px;
+}
+[qugan]{
+  border:1px solid black;
+  width:130px;
+  height:110px;
+  background-color: #07beea;
+  position: absolute;
+  top:-59px;
+  left:34px;
+  z-index: -3;
+}
+[wadang]{
+
+  width:38px;
+  height: 130px;
+  border-radius:50%;
+  background-color:white;
+  position: absolute;
+  top:47px;
+  left:82px;
+}
+[youjiao]{
+  border:1px solid black;
+  width:60px;
+  height: 15px;
+  border-radius:30% 30% 20% 40%;
+  background-color: #fff;
+  position: absolute;
+  top:46px;
+  left:30px;
+}
+[zuojiao]{
+  border:1px solid black;
+  width:60px;
+  height: 15px;
+  border-radius:30% 30% 40% 20%;
+  background-color: #fff;
+  position: absolute;
+  top:46px;
+  left:110px;
+}
+[zuoshou]{
+  border:1px solid black;
+  width:40px;
+  height: 30px;
+  background-color: #07beea;
+  transform:skewy(30deg);
+  position: absolute;
+  left:160px;
+  top:-48px;
+  border-left:none;
+  z-index: -1;
+}
+[youshou]{
+  border:1px solid black;
+  width:40px;
+  height: 30px;
+  background-color: #07beea;
+  transform:skewy(-30deg);
+    position: absolute;
+  top:-48px;
+  border-right:none;
+}
+[zuoshouqiu]{
+  border:1px solid black;
+  width:40px;
+  height:40px;
+  background-color: #fff;
+  border-radius:50%;
+  position: absolute;
+  top:-44px;
+  left:177px;
+}
+[youshouqiu]{
+    border:1px solid black;
+  width:40px;
+  height:40px;
+  background-color: #fff;
+  border-radius:50%;
+  position: absolute;
+  top:-44px;
+  left:-15px;
+}
+
+</style>
+</head>
+<body>
+  <div zhengge>
+  <div tou>
+    <div lian></div>
+    <div zuoyan></div>
+    <div youyan></div>
+    <div yanzhu></div>
+    <div yanzhuyou></div>
+    <div yishu></div>
+    <div hongqiu></div>
+    <div zuiba></div>
+    <div huxu></div>
+    <div huxu2></div>
+     <div shanghuxu></div>
+    <div xiahuxu></div>
+    <div zuohuxu></div>
+    <div youhuxu></div>
+  </div>
+  <div xiangquan>
+  </div>
+  <div lingdang class="lingdang"></div>
+  <div shenti>
+      <div duzi>
+        <div koudai></div>
+      </div>
+    <div qugan></div>
+    <div zuoshou></div>
+    <div youshou></div>
+    <div youshouqiu></div>
+    <div zuoshouqiu></div>
+    <div wadang></div>
+    <div youjiao></div>
+    <div zuojiao></div>
+  </div>
+</div>
+</body>
+</html>
