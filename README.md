@@ -1,2 +1,2 @@
-# zhangkunduanfei.coding.me
-自己实现的一些小玩意
+# 首页的index.html是仿小米网站
+加上自己实现的一些小玩意
